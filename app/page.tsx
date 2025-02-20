@@ -1,14 +1,15 @@
 // force-static to generate this as ISR function
-export const dynamic = 'force-static';
+export const revalidate = 1;
 
 export default async function Home() {
-  const res = await fetch('http://localhost:3000/api/data', {
-    next: {
-      tags: ['homepage']
-    }
-  });
+  // const res = await fetch('http://localhost:3000/api/data', {
+  //   next: {
+  //     tags: ['homepage']
+  //   }
+  // });
 
-  const json = await res.json();
+  // const json = await res.json();
 
-  return <span>Homepage: {json.timestamp}</span>;
+  // return <span>Homepage: {json.timestamp}</span>;
+  return <span>Test</span>
 }
