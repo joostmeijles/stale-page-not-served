@@ -1,9 +1,9 @@
 import { revalidateTag } from 'next/cache';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-export async function POST(request: NextRequest) {
+export async function GET() {
     revalidateTag("homepage");
 
     return NextResponse.json({ status: 200, revalidated: true, now: Date.now() });
